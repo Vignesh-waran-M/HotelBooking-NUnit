@@ -19,8 +19,6 @@ namespace HotelBookinNunit
     
     public class ExtentReportTests
     {
-
-        //ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
         public static String xmlpath = "C:\\Users\\vivigneshwaran\\source\\repos\\HotelBookinNunit\\HotelBookinNunit\\DataFile.xml";
         XmlTextReader xtr = new XmlTextReader(xmlpath);
         public static ExtentReports _extent;
@@ -54,10 +52,7 @@ namespace HotelBookinNunit
         ExcelClass exl = new ExcelClass();
         DataTable dt = null;
         
-
-
-
-        [OneTimeSetUp]
+	[OneTimeSetUp]
         public void Setup()
         {
             while (xtr.Read())
@@ -72,18 +67,15 @@ namespace HotelBookinNunit
             driver.Manage().Window.Maximize();
             
             driver.Navigate().GoToUrl(Url);
-           
-            //wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-
         }
        
 
         [OneTimeTearDown]
         protected void ExtentClose()
-        {
-            
+        {            
             _extent.Flush();
         }
+
         [TearDown]
         public void Cleanup()
         {
@@ -154,6 +146,7 @@ namespace HotelBookinNunit
 
             return MediaEntityBuilder.CreateScreenCaptureFromBase64String(screenshot, screenShotName).Build();
         }
+
         HomePage homePage = null;
         Cookies cookiePage = null;
         HotelListPage hotelListPage = null;
@@ -169,7 +162,7 @@ namespace HotelBookinNunit
         public void IamOnTheHolidayInnHomepage()
         {
 
-            String expected_PageTitle = "Holiday Inn® Hotels | Book Family Friendly Hotels Worldwide | Official Site";
+            String expected_PageTitle = "Holiday InnÂ® Hotels | Book Family Friendly Hotels Worldwide | Official Site";
             String result_PageTitle;
            
 
