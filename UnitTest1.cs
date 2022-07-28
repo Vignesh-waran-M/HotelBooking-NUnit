@@ -15,8 +15,6 @@ using OpenQA.Selenium.Firefox;
 
 namespace HotelBookinNunit
 {
-
-    
     public class ExtentReportTests
     {
         public static String xmlpath = "C:\\Users\\vivigneshwaran\\source\\repos\\HotelBookinNunit\\HotelBookinNunit\\DataFile.xml";
@@ -46,7 +44,6 @@ namespace HotelBookinNunit
         }
         public IWebDriver driver;
         public WebDriverWait wait;
-        
         public double TotalAmount;
         public string Url;
         ExcelClass exl = new ExcelClass();
