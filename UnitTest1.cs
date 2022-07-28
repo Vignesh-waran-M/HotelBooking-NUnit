@@ -44,7 +44,6 @@ namespace HotelBookinNunit
         }
         public IWebDriver driver;
         public WebDriverWait wait;
-        
         public double TotalAmount;
         public string Url;
         ExcelClass exl = new ExcelClass();
