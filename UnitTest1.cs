@@ -209,8 +209,7 @@ namespace HotelBookinNunit
             Console.WriteLine("Footer elements present");
             hotelListPage.SearchHotel();
         }
-
-        [Test, Order(4)]
+	[Test, Order(4)]
         public void SelectingTheHotel()
         {
             String context_name = TestContext.CurrentContext.Test.Name;
